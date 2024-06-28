@@ -7,6 +7,7 @@ body {
     margin: 0;
     font-family: 'Arial', sans-serif;
     color: #ffffff;
+    overflow: hidden;
 }
 
 .container {
@@ -37,14 +38,20 @@ body {
     border: none;
     cursor: pointer;
     outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 #coinImage {
     width: 150px;
     height: 150px;
-    transition: transform 0.1s;
+    transition: transform 0.1s ease;
 }
 
 #clickerButton:active #coinImage {
-    transform: scale(0.95);
+    transform: scale(0.9);
+}
+
+#coinImage.clicked {
+    transform: scale(0.9);
+    transition: transform 0.1s ease;
 }
